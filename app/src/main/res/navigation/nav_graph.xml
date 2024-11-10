@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeScreen">
+
+    <composable
+        android:id="@+id/welcomeScreen"
+        android:name="com.geeks.hmgeeks_62.ui.screens.WelcomeScreen"
+        android:label="Welcome Screen">
+        <action
+            android:id="@+id/action_welcome_to_registration"
+            app:destination="@id/registrationScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/registrationScreen"
+        android:name="com.geeks.hmgeeks_62.ui.screens.RegistrationScreen"
+        android:label="Registration Screen">
+        <action
+            android:id="@+id/action_registration_to_confirmation"
+            app:destination="@id/confirmationScreen" />
+    </composable>
+
+    <composable
+        android:id="@+id/confirmationScreen"
+        android:name="com.geeks.hmgeeks_62.ui.screens.ConfirmationScreen"
+        android:label="Confirmation Screen">
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </composable>
+
+</navigation>
